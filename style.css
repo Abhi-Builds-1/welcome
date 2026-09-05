@@ -1,0 +1,610 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+
+/* ================= GENERAL PAGE ================= */
+
+.page {
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+/* ================= PAGE 1 ================= */
+
+.page-one {
+    background:
+        radial-gradient(circle at 20% 20%,
+        rgba(255,255,255,.25),
+        transparent 25%),
+        linear-gradient(135deg,
+        #ff758c,
+        #ff7eb3,
+        #8e44ad);
+
+    color: white;
+}
+
+.card {
+    width: min(92vw, 650px);
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    backdrop-filter: blur(15px);
+
+    border: 2px solid
+        rgba(255,255,255,.35);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.25);
+
+    position: relative;
+    z-index: 2;
+}
+
+.heart-big {
+    font-size: 75px;
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+.small-title {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+h1 {
+    margin: 20px 0;
+
+    font-size: clamp(38px, 9vw, 75px);
+
+    letter-spacing: 3px;
+}
+
+.page-one h1 span {
+    color: #fff0f5;
+}
+
+.cute-text {
+    font-size: 21px;
+    margin: 15px;
+}
+
+.buttons {
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+button {
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s,
+        box-shadow .25s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.yes-btn {
+    background: white;
+    color: #e91e63;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.25);
+}
+
+.no-btn {
+    background: #333;
+    color: white;
+
+    position: relative;
+}
+
+.hint {
+    margin-top: 25px;
+    opacity: .8;
+}
+
+
+/* ================= PAGE 2 ================= */
+
+.page-two {
+    background:
+        linear-gradient(
+            135deg,
+            #1f1c2c,
+            #928dab
+        );
+
+    color: white;
+}
+
+.angry-card {
+    width: min(90vw, 600px);
+
+    text-align: center;
+
+    padding: 55px 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.1);
+
+    border: 2px solid
+        rgba(255,255,255,.2);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,.4);
+}
+
+.angry-emoji {
+    font-size: 90px;
+
+    animation:
+        shake .5s infinite;
+}
+
+@keyframes shake {
+
+    0%, 100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-8deg);
+    }
+
+    75% {
+        transform: rotate(8deg);
+    }
+}
+
+.angry-card h1 {
+    font-size: clamp(35px, 8vw, 65px);
+}
+
+.angry-card p {
+    font-size: 20px;
+    margin: 15px;
+}
+
+#tryAgainBtn {
+    margin-top: 25px;
+
+    background: #ff4f81;
+    color: white;
+}
+
+
+/* ================= PAGE 3 ================= */
+
+.page-three {
+    background:
+        linear-gradient(
+            135deg,
+            #202020,
+            #3b2c35,
+            #161616
+        );
+
+    color: #eee;
+}
+
+.letter-card {
+    width: min(92vw, 700px);
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(45,35,40,.96),
+            rgba(25,25,25,.96)
+        );
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.6);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+}
+
+.letter-icon {
+    font-size: 65px;
+}
+
+.page-three h1 {
+    color: #e8b4c7;
+    font-size: 45px;
+}
+
+.letter {
+    text-align: left;
+
+    font-family:
+        Georgia,
+        serif;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.letter p {
+    margin: 18px 0;
+}
+
+.signature {
+    text-align: right;
+    color: #e8b4c7;
+}
+
+#page3Next {
+    margin-top: 20px;
+
+    background: #d889a4;
+    color: white;
+}
+
+
+/* ================= PAGE 4 ================= */
+
+.page-four {
+    background:
+        linear-gradient(
+            135deg,
+            #f6e7d8,
+            #e6c9a8,
+            #b78c6b
+        );
+
+    color: #4b3027;
+}
+
+.memory-container {
+    width: min(94vw, 900px);
+
+    text-align: center;
+}
+
+.memory-top {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.memory-container h1 {
+    font-size: clamp(38px, 8vw, 65px);
+}
+
+.photo-frame {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin: 30px auto;
+
+    max-width: 800px;
+}
+
+.photo-card {
+    background: #fffaf0;
+
+    padding: 12px;
+
+    box-shadow:
+        0 15px 30px
+        rgba(60,40,20,.3);
+
+    transform:
+        rotate(-2deg);
+
+    transition:
+        transform .3s;
+}
+
+.photo-card:nth-child(2) {
+    transform:
+        rotate(2deg);
+}
+
+.photo-card:hover {
+    transform:
+        rotate(0)
+        scale(1.03);
+}
+
+.photo-card img {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.photo-card span {
+    display: block;
+
+    padding: 12px 5px;
+
+    font-size: 16px;
+}
+
+.memory-bottom {
+    font-style: italic;
+
+    font-size: 18px;
+
+    margin: 20px;
+}
+
+#page4Next {
+    background: #704c3d;
+    color: white;
+}
+
+
+/* ================= PAGE 5 ================= */
+
+.page-five {
+    background:
+        radial-gradient(
+            circle at top,
+            #ffe5ed,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffd5e1,
+            #e8b6c8
+        );
+
+    color: #492b36;
+}
+
+.final-card {
+    width: min(92vw, 750px);
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,.75);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(80,30,50,.25);
+
+    border:
+        2px solid
+        rgba(255,255,255,.7);
+}
+
+.final-heart {
+    font-size: 65px;
+
+    animation:
+        heartbeat 1.4s infinite;
+}
+
+.page-five h1 {
+    color: #a83c62;
+
+    font-size: clamp(
+        40px,
+        8vw,
+        65px
+    );
+}
+
+.final-letter {
+    text-align: left;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.final-letter p {
+    margin: 17px 0;
+}
+
+.big-ending {
+    text-align: center;
+
+    font-size: 25px;
+
+    color: #b73562;
+
+    font-weight: bold;
+}
+
+.final-letter .signature {
+    text-align: center;
+
+    font-style: italic;
+}
+
+.final-decoration {
+    margin-top: 25px;
+
+    font-size: 30px;
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.floating {
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    opacity: .7;
+
+    animation:
+        floatUp
+        8s linear
+        infinite;
+
+    z-index: 1;
+}
+
+.floating:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.floating:nth-child(3) {
+    left: 55%;
+    animation-delay: 4s;
+}
+
+.floating:nth-child(4) {
+    left: 75%;
+    animation-delay: 1s;
+}
+
+.floating:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes floatUp {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0);
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+    }
+}
+
+
+/* ================= PHONE ================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 35px 20px;
+    }
+
+    .buttons {
+        gap: 15px;
+    }
+
+    button {
+        padding: 13px 22px;
+        font-size: 15px;
+    }
+
+    .photo-frame {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .letter-card,
+    .final-card {
+        padding: 30px 20px;
+    }
+
+    .letter,
+    .final-letter {
+        font-size: 16px;
+    }
+}
